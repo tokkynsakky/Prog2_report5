@@ -4,17 +4,13 @@
 package jp.ac.uryukyu.ie.e215711;
 
 public class App {
-    String str = null;
-    public void howLength(){
-        System.out.println(str.length());
+    static String str = "百二十三";
+    public int DoingParseInt(String strings){
+        int num = Integer.parseInt(strings);
+        return num;
     }
-    public static void main(String[] args) {
-        try{
-        App how  = new App();
-        how.howLength();
-        }catch(NullPointerException e){
-            System.out.println("NullPointerExceptionが発生しました。");
-            System.out.println("エラーメッセージ:" + e.getMessage());
-        }
+    public static void main(String[] atgs){
+        App parse = new App();
+        System.out.println(parse.DoingParseInt(str));
     }
 }
