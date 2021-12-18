@@ -9,7 +9,12 @@ public class App {
         System.out.println(str.length());
     }
     public static void main(String[] args) {
+        try{
         App how  = new App();
         how.howLength();
+        }catch(NullPointerException e){
+            System.out.println("NullPointerExceptionが発生しました。");
+            System.out.println("エラーメッセージ:" + e.getMessage());
+        }
     }
 }
